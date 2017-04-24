@@ -14,7 +14,7 @@ export default class Index extends Component {
   constructor(props) {
     super(props)
     // TODO metamask/mist?
-    if (config.interaction.providerUrl) {
+    if (config.interaction && config.interaction.providerUrl) {
       this.web3 = new Web3()
       this.web3.setProvider(new this.web3.providers.HttpProvider(config.interaction.providerUrl))
     }
